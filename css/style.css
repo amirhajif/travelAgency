@@ -90,7 +90,9 @@ a {
 .m-3 {
   margin: 3rem;
 }
-
+.my {
+  margin-top: 1rem;
+}
 .p-1 {
   padding: 1.25rem;
 }
@@ -110,7 +112,10 @@ a {
 .py-3 {
   padding: 3rem 0;
 }
-
+.seperator {
+  width: 50%;
+  margin: auto;
+}
 #navbar {
   display: flex;
   justify-content: space-between;
@@ -172,22 +177,32 @@ a {
   border-radius: 50%;
 }
 
-#section2 {
+.v-card {
   display: flex;
 }
 
-#section2 div {
+.v-card div {
   flex: 1;
 }
 
-#section2 .img {
+.v-card .img {
   background: url("../img/section2.jpg") no-repeat center center/cover;
 }
-
-#section2 .content {
+.v-card #img-t1 {
+  background: url("../img/tour1.jpg") no-repeat center center/cover;
+}
+.v-card #img-t2 {
+  background: url("../img/tour2.jpg") no-repeat center center/cover;
+}
+.v-card #img-t3 {
+  background: url("../img/tour3.jpg") no-repeat center center/cover;
+}
+.v-card .content {
   text-align: right;
 }
-
+.rtl{
+  text-align: right;
+}
 #section3 .items {
   display: flex;
 }
@@ -197,10 +212,11 @@ a {
 }
 
 #section3 .items img {
-  border-radius: 50%;
+  border-radius: 10%;
   display: block;
   margin: auto;
-  width: 60%;
+  width: 180px;
+  height: 250px;
 }
 
 #contact {

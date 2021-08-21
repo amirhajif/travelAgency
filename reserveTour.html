@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Travel gency site" />
+    <meta name="keywords" content="تور،مسارفت،تور مسافرتی" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>رجا سفر</title>
+  </head>
+  <body>
+    <nav id="navbar" class="bg-dark">
+      <h1 class="log">
+        <a href="#"><span class="text-primary">رجا</span>سفر</a>
+      </h1>
+      <ul>
+        <li>
+          <a href="./index.html"
+            ><span> خانه </span><i class="fas fa-home"></i
+          ></a>
+        </li>
+        <li>
+          <a href="./login.html"
+            ><span> اسم کاربر </span><i class="fas fa-user"></i
+          ></a>
+        </li>
+        <li>
+          <a href="#"><span> خروج </span><i class="fas fa-sign-out-alt"></i></a>
+        </li>
+      </ul>
+    </nav>
+
+    <section id="contact" class="py-2">
+      <div class="contact-form">
+        <hr class="seperator" />
+        <br />
+        <h2 class="text-center">رزرو تور</h2>
+        <br />
+        <hr class="seperator" />
+        <br>
+
+        <form action="#">
+          <div class="form-group">
+            <label for="name">نام و نام خانوادگی</label>
+            <input type="text" id="name" class="rtl" />
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="phoneNumber">شماره تماس</label>
+            <input type="text" id="phoneNumber" />
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="tours">انتخاب تور</label>
+
+            <select name="tours" id="tours">
+              <option value="t1">جنگل گردی</option>
+              <option value="t2">کویر گردی</option>
+              <option value="t3">کوه نوردی</option>
+            </select>
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="name">نکته خاص یا توضیحات(اختیاری)</label>
+            <textarea class="rtl" rows=5></textarea>
+          </div>
+          <br>
+          <button class="btn" type="submit">ارسال</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="bg-dark py-2 my">
+      <div id="main-footer" class="container">
+        <div>
+          <p>Copyright &copy; 2021</p>
+        </div>
+        <div>
+          <i class="fab fa-instagram fa-2x"></i>
+          <i class="fab fa-telegram fa-2x"></i>
+          <i class="fab fa-twitter fa-2x"></i>
+          <i class="fab fa-facebook-square fa-2x"></i>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
