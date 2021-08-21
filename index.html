@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Welcome to the First Site" />
+    <meta name="keywords" content="HTML ,CSS, PHP, developer" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width:768px)"
+      href="css/mobile.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (min-width:1100px)"
+      href="css/widescreen.css"
+    />
+
+    <title>Flex Site</title>
+  </head>
+  <body>
+    <nav id="navbar" class="bg-dark">
+      <h1 class="log">
+        <a href="#"><span class="text-primary">رجا</span>سفر</a>
+      </h1>
+      <ul>
+        <li><a href="#">خانه</a></li>
+        <li><a href="#">درباره ما</a></li>
+        <li><a href="#">تماس باما</a></li>
+      </ul>
+    </nav>
+
+    <header id="showcase">
+      <div class="showcase-content">
+        <h1 class="l-heading m-2">تجربه بینظیر یک سفر</h1>
+        <p class="bold m-3">
+          کویر؟جنگل؟کوه؟فقط انتخاب کن و به ما بگو تا یک تجربه فوق العاده برات
+          رقم بزنیم
+        </p>
+        <a class="btn" href="#"> جزئیات بیشتر</a>
+      </div>
+    </header>
+
+    <section id="section1" class="bg-light py-2">
+      <div class="container">
+        <h2 class="m-heading text-center">تور های مسافرتی ما</h2>
+        <div class="items">
+          <div class="item">
+            <i class="fas fa-layer-group fa-2x"></i>
+            <div>
+              <h4 class="m-1">طبیعت بکر رو از نده</h4>
+              <p>با تور های جنگل کردی ما به عمق دل طبیعت بزن</p>
+            </div>
+          </div>
+          <div class="item">
+            <i class="fas fa-layer-group fa-2x"></i>
+            <div>
+              <h4 class="m-1">یه شب اروم و پرستاره</h4>
+              <p>با تور های کویر گردی ما یه شب بینظیر رو تو کویر سپری کن</p>
+            </div>
+          </div>
+          <div class="item">
+            <i class="fas fa-layer-group fa-2x"></i>
+            <div>
+              <h4 class="m-1">بلندترین قله هارو فتح کن</h4>
+              <p>با تور های کوهنوری ما بلندترین قله ها رو فتح کن</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section2">
+      <div class="img"></div>
+      <div class="content bg-dark p-2">
+        <h2 class="m-heading m-2">رجاسفر چیه؟</h2>
+        <p class="py-1">
+          رجا سفر یه تیم کاربلد و حرفه ای تو زمینه تور های مسافری هستش که از
+          دانشگاه شهید رجایی نشات گرفته،ویژگی هایی که رجاسفر داره حالا چیان؟
+        </p>
+        <ul class="list">
+          <li>جامعه آماری بالا <span><i class="fas fa-users"></i></spa></li>
+          <li>سابقه بالا <span><i class="fas fa-certificate"></i></span></li>
+          <li>تور لیدر های حرفه ای با مدرک بین المللی <span><i class="fas fa-graduation-cap"></i></span></li>
+          <li>غذای با کیفیت <span>
+          </span><i class="fas fa-utensils"></i></li>
+          <li>عکاس حرفه ای برای ثبت لحظات شما <span><i class="fas fa-camera"></i></span></li>
+          <li>قیمت های مناسب <span><i class="fas fa-dollar-sign"></i></span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="section3" class="bg-light">
+      <div class="container p-2">
+        <h2 class="m-heading text-center">عکس های منتخب</h2>
+        <div class="items py-1">
+          <div><img src="./img/person-1.jpg" alt="" /></div>
+          <div><img src="./img/person-2.jpg" alt="" /></div>
+          <div><img src="./img/person-1.jpg" alt="" /></div>
+          <div><img src="./img/person-2.jpg" alt="" /></div>
+          <div><img src="./img/person-1.jpg" alt="" /></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-2">
+      <div class="contact-form">
+        <h2 class="m-heading">ارتباط با ما</h2>
+        <form action="#">
+          <div class="form-group">
+            <label for="name">نام</label>
+            <input type="text" />
+          </div>
+          <div class="form-group">
+            <label for="email">ایمیل</label>
+            <input type="text" />
+          </div>
+          <div class="form-group">
+            <label for="name">شماره تماس</label>
+            <input type="text" />
+          </div>
+          <div class="form-group">
+            <label for="name">پیام</label>
+            <textarea></textarea>
+          </div>
+          <button class="btn" type="submit">ارسال</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="bg-dark py-2">
+      <div id="main-footer" class="container">
+        <div>
+          <p>Copyright &copy; 2019</p>
+        </div>
+        <div>
+          <i class="fab fa-instagram fa-2x"></i>
+          <i class="fab fa-telegram fa-2x"></i>
+          <i class="fab fa-twitter fa-2x"></i>
+          <i class="fab fa-youtube fa-2x"></i>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
