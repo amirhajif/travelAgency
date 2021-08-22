@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="fa">
   <head>
@@ -23,17 +26,50 @@
       </h1>
       <ul>
         <li>
-          <a href="./index.html"
+          <a href="index.php"
             ><span> خانه </span><i class="fas fa-home"></i
           ></a>
         </li>
         <li>
-          <a href="./login.html"
-            ><span> اسم کاربر </span><i class="fas fa-user"></i
-          ></a>
+            <a
+                <?php
+                if (isset($_SESSION['active']))
+                {
+                    ?>
+                    href="reserveTour.php"
+                    <?php
+                }
+
+                else{
+                    ?>
+                    href="login.php"
+                    <?php
+                }
+                ?>
+
+            >
+              <span>
+                  <?php
+                  if (isset($_SESSION['active']))
+                  {
+                      ?>
+                      شروع سفر
+                      <?php
+                  }
+
+                  else{
+                      ?>
+                      ورود/ثبت نام
+                      <?php
+                  }
+                  ?>
+              </span>
+
+                <i class="fas fa-user"></i
+                ></a>
         </li>
         <li>
-          <a href="#"><span> خروج </span><i class="fas fa-sign-out-alt"></i></a>
+          <a href="checkFiles/logout.php"><span> خروج </span><i class="fas fa-sign-out-alt"></i></a>
         </li>
       </ul>
     </nav>

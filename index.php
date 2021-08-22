@@ -1,3 +1,21 @@
+<?php
+session_start();
+if (isset($_SESSION['successSignup']))
+{
+    unset($_SESSION['successSignup']);
+    echo '<script>alert("به تور رجا خوش آمدید")</script>';
+}
+if (isset($_SESSION['successLogin']))
+{
+    unset($_SESSION['successLogin']);
+    echo '<script>alert("به تور رجا خوش آمدید")</script>';
+}
+try {
+    $link = mysqli_connect("localhost", "root", "", "travelagency");
+} catch (Exception $exception) {
+    echo $exception;
+}
+?>
 <!DOCTYPE html>
 <html lang="fa">
   <head>
@@ -23,13 +41,46 @@
       </h1>
       <ul>
         <li>
-          <a href="./index.html"
+          <a href="index.php"
             ><span> خانه </span><i class="fas fa-home"></i
           ></a>
         </li>
         <li>
-          <a href="./login.html"
-            ><span> ورود/ثبت نام </span><i class="fas fa-user"></i
+          <a
+              <?php
+              if (isset($_SESSION['active']))
+              {
+                  ?>
+                 href="reserveTour.php"
+                  <?php
+              }
+
+              else{
+              ?>
+                  href="login.php"
+            <?php
+            }
+            ?>
+
+          >
+              <span>
+                  <?php
+                  if (isset($_SESSION['active']))
+                  {
+                   ?>
+                      شروع سفر
+                      <?php
+                      }
+
+                      else{
+                          ?>
+                          ورود/ثبت نام
+                  <?php
+                      }
+                  ?>
+              </span>
+
+              <i class="fas fa-user"></i
           ></a>
         </li>
       </ul>
@@ -42,7 +93,23 @@
           کویر؟جنگل؟کوه؟فقط انتخاب کن و به ما بگو تا یک تجربه فوق العاده برات
           رقم بزنیم
         </p>
-        <a class="btn" href="./login.html"> ورود برای رزرو</a>
+        <a class="btn"
+            <?php
+            if (isset($_SESSION['active']))
+            {
+                ?>
+                href="reserveTour.php"
+                <?php
+            }
+
+            else{
+                ?>
+                href="login.php"
+                <?php
+            }
+            ?>
+
+        > ورود برای رزرو</a>
       </div>
     </header>
 
@@ -152,18 +219,24 @@
       <div id="img-t1"></div>
       <div class="content bg-dark p-2">
         <h2 class="m-heading m-2">تور سفر به شمال</h2>
-        <p class="py-1">سفر به اعماق جنگل های گیلان و مازندران</p>
+          <?php
+          mysqli_query($link,"SET NAMES utf8");
+          $query="SELECT * FROM home WHERE id=1";
+          $result=mysqli_query($link,$query);
+          $row=mysqli_fetch_array($result);
+          ?>
+        <p class="py-1"><?php echo $row['title']; ?></p>
         <ul class="list">
           <li>
-            <span>50</span><span> :ظرفیت(نفر)</span>
+            <span><?php echo $row['capacity']; ?></span><span> :ظرفیت(نفر)</span>
             <span><i class="fas fa-users"></i></span>
           </li>
           <li>
-            <span>3</span><span> :مدت(روز)</span>
+            <span><?php echo $row['period']; ?></span><span> :مدت(روز)</span>
             <span><i class="fas fa-clock"></i></span>
           </li>
           <li>
-            <span>600,000</span><span> :قیمت به ازای هر نفر(تومان)</span>
+            <span><?php echo $row['price']; ?></span><span> :قیمت به ازای هر نفر(تومان)</span>
             <span><i class="fas fa-dollar-sign"></i></span>
           </li>
         </ul>
@@ -173,18 +246,24 @@
     <section class="v-card my">
       <div class="content bg-dark p-2">
         <h2 class="m-heading m-2">تور سفر به کویر</h2>
-        <p class="py-1">سفر به دل کویر لوت و مصر</p>
-        <ul class="list">
-          <li>
-            <span>45</span><span> :ظرفیت(نفر)</span>
-            <span><i class="fas fa-users"></i></span>
-          </li>
-          <li>
-            <span>2</span><span> :مدت(روز)</span>
-            <span><i class="fas fa-clock"></i></span>
-          </li>
-          <li>
-            <span>500,000</span><span> :قیمت به ازای هر نفر(تومان)</span>
+          <?php
+          mysqli_query($link,"SET NAMES utf8");
+          $query="SELECT * FROM home WHERE id=2";
+          $result=mysqli_query($link,$query);
+          $row=mysqli_fetch_array($result);
+          ?>
+          <p class="py-1"><?php echo $row['title']; ?></p>
+          <ul class="list">
+              <li>
+                  <span><?php echo $row['capacity']; ?></span><span> :ظرفیت(نفر)</span>
+                  <span><i class="fas fa-users"></i></span>
+              </li>
+              <li>
+                  <span><?php echo $row['period']; ?></span><span> :مدت(روز)</span>
+                  <span><i class="fas fa-clock"></i></span>
+              </li>
+              <li>
+                  <span><?php echo $row['price']; ?></span><span> :قیمت به ازای هر نفر(تومان)</span>
             <span><i class="fas fa-dollar-sign"></i></span>
           </li>
         </ul>
@@ -196,18 +275,24 @@
       <div id="img-t3"></div>
       <div class="content bg-dark p-2">
         <h2 class="m-heading m-2">سفر به بلندترین نقطه ایران</h2>
-        <p class="py-1">کوهنوردی تا نوک دماوند</p>
-        <ul class="list">
-          <li>
-            <span>20</span><span> :ظرفیت(نفر)</span>
-            <span><i class="fas fa-users"></i></span>
-          </li>
-          <li>
-            <span>4</span><span> :مدت(روز)</span>
-            <span><i class="fas fa-clock"></i></span>
-          </li>
-          <li>
-            <span>750,000</span><span> :قیمت به ازای هر نفر(تومان)</span>
+          <?php
+          mysqli_query($link,"SET NAMES utf8");
+          $query="SELECT * FROM home WHERE id=3";
+          $result=mysqli_query($link,$query);
+          $row=mysqli_fetch_array($result);
+          ?>
+          <p class="py-1"><?php echo $row['title']; ?></p>
+          <ul class="list">
+              <li>
+                  <span><?php echo $row['capacity']; ?></span><span> :ظرفیت(نفر)</span>
+                  <span><i class="fas fa-users"></i></span>
+              </li>
+              <li>
+                  <span><?php echo $row['period']; ?></span><span> :مدت(روز)</span>
+                  <span><i class="fas fa-clock"></i></span>
+              </li>
+              <li>
+                  <span><?php echo $row['price']; ?></span><span> :قیمت به ازای هر نفر(تومان)</span>
             <span><i class="fas fa-dollar-sign"></i></span>
           </li>
         </ul>
