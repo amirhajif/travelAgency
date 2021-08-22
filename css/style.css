@@ -219,23 +219,23 @@ a {
   height: 250px;
 }
 
-#contact {
+#reserve {
   display: flex;
   justify-content: center;
 }
 
-#contact .contact-form {
+#reserve .reserve-form {
   flex-basis: 600px;
   text-align: right;
 }
 
-#contact .contact-form label {
+#reserve .reserve-form label {
   display: block;
   margin: 1rem 0;
 }
 
-#contact .contact-form input,
-#contact .contact-form textarea {
+#reserve .reserve-form input,
+#reserve .reserve-form textarea {
   width: 100%;
   padding: 0.5rem;
 }
