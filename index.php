@@ -1,5 +1,10 @@
 <?php
 session_start();
+if (isset($_SESSION['submitReserve']))
+{
+    unset($_SESSION['submitReserve']);
+    echo '<script>alert("تور شما با موفقیت رزرو شد")</script>';
+}
 if (isset($_SESSION['successSignup']))
 {
     unset($_SESSION['successSignup']);

@@ -83,30 +83,31 @@ session_start();
         <hr class="seperator" />
         <br>
 
-        <form action="#">
+        <form action="checkFiles/reserveProcess.php" method="post">
           <div class="form-group">
             <label for="name">نام و نام خانوادگی</label>
-            <input type="text" id="name" class="rtl" />
+            <input type="text" id="name" name="name" class="rtl" required />
           </div>
           <br>
           <div class="form-group">
             <label for="phoneNumber">شماره تماس</label>
-            <input type="text" id="phoneNumber" />
+            <input type="text" id="phoneNumber" name="phoneNumber" required />
           </div>
           <br>
           <div class="form-group">
             <label for="tours">انتخاب تور</label>
 
-            <select name="tours" id="tours">
-              <option value="t1">جنگل گردی</option>
-              <option value="t2">کویر گردی</option>
-              <option value="t3">کوه نوردی</option>
+            <select name="tours" id="tours" required>
+              <option selected disabled value="">-- انتخاب تور --</option>
+              <option value="jungle">جنگل گردی</option>
+              <option value="dessert">کویر گردی</option>
+              <option value="mountain">کوه نوردی</option>
             </select>
           </div>
           <br>
           <div class="form-group">
             <label for="name">نکته خاص یا توضیحات(اختیاری)</label>
-            <textarea class="rtl" rows=5></textarea>
+            <textarea class="rtl" rows=5 name="description"></textarea>
           </div>
           <br>
           <button class="btn" type="submit">ارسال</button>
